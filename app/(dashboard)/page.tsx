@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { getSummary, getSales } from '@/features/sales/salesService';
 import { getTopProducts } from '@/features/products/productsService';
 import MetricCard from '@/components/cards/MetricCard';
@@ -7,6 +8,11 @@ import DonutChart from '@/components/charts/DonutChart';
 import RealtimeChart from '@/components/charts/RealtimeChart';
 import TopProductsList from '@/components/lists/TopProductsList';
 import styles from './page.module.scss';
+
+export const metadata: Metadata = {
+    title: 'Dashboard Overview | eCommerce Dashboard',
+    description: 'Overview of sales, products, and customer insights.',
+};
 
 export default async function DashboardPage() {
     const summary = await getSummary();
