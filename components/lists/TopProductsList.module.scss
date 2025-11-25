@@ -1,0 +1,64 @@
+.container {
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.header {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.category {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.stats {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.sales {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.revenue {
+    font-weight: 600;
+    color: var(--primary-color);
+}

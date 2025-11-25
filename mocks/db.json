@@ -1,0 +1,180 @@
+{
+    "sales": [
+        {
+            "id": 1,
+            "date": "2025-11-01",
+            "revenue": 1250,
+            "orders": 24
+        },
+        {
+            "id": 2,
+            "date": "2025-11-02",
+            "revenue": 980,
+            "orders": 19
+        },
+        {
+            "id": 3,
+            "date": "2025-11-03",
+            "revenue": 1100,
+            "orders": 22
+        },
+        {
+            "id": 4,
+            "date": "2025-11-04",
+            "revenue": 1450,
+            "orders": 30
+        },
+        {
+            "id": 5,
+            "date": "2025-11-05",
+            "revenue": 1300,
+            "orders": 25
+        },
+        {
+            "id": 6,
+            "date": "2025-11-06",
+            "revenue": 900,
+            "orders": 15
+        },
+        {
+            "id": 7,
+            "date": "2025-11-07",
+            "revenue": 1600,
+            "orders": 35
+        }
+    ],
+    "summary": {
+        "revenue": 45230.5,
+        "orders": 1234,
+        "conversionRate": 0.032,
+        "avgOrderValue": 36.65
+    },
+    "products": [
+        {
+            "id": "p1",
+            "name": "Product A",
+            "unitsSold": 240,
+            "revenue": 8400,
+            "stock": 12,
+            "category": "Phones"
+        },
+        {
+            "id": "p2",
+            "name": "Product B",
+            "unitsSold": 150,
+            "revenue": 4500,
+            "stock": 2,
+            "category": "Accessories"
+        },
+        {
+            "id": "p3",
+            "name": "Product C",
+            "unitsSold": 120,
+            "revenue": 3600,
+            "stock": 50,
+            "category": "Laptops"
+        },
+        {
+            "id": "p4",
+            "name": "Product D",
+            "unitsSold": 90,
+            "revenue": 2700,
+            "stock": 0,
+            "category": "Tablets"
+        }
+    ],
+    "customers": [
+        {
+            "id": "c1",
+            "name": "Ali",
+            "orders": 4,
+            "lifetimeValue": 250.5,
+            "joined": "2024-02-14"
+        },
+        {
+            "id": "c2",
+            "name": "Mona",
+            "orders": 12,
+            "lifetimeValue": 1200,
+            "joined": "2023-10-01"
+        },
+        {
+            "id": "c3",
+            "name": "Sara",
+            "orders": 2,
+            "lifetimeValue": 150.0,
+            "joined": "2024-05-20"
+        },
+        {
+            "id": "c4",
+            "name": "John",
+            "orders": 8,
+            "lifetimeValue": 800.0,
+            "joined": "2023-12-12"
+        }
+    ],
+    "inventory": [
+        {
+            "id": "p1",
+            "name": "Product A",
+            "sku": "PA-001",
+            "stock": 12,
+            "reorderLevel": 10
+        },
+        {
+            "id": "p2",
+            "name": "Product B",
+            "sku": "PB-002",
+            "stock": 2,
+            "reorderLevel": 10
+        },
+        {
+            "id": "p3",
+            "name": "Product C",
+            "sku": "PC-003",
+            "stock": 50,
+            "reorderLevel": 20
+        },
+        {
+            "id": "p4",
+            "name": "Product D",
+            "sku": "PD-004",
+            "stock": 0,
+            "reorderLevel": 5
+        }
+    ],
+    "transactions": [
+        {
+            "id": "t1",
+            "date": "2025-11-23T09:12:00Z",
+            "orderId": "o123",
+            "amount": 120,
+            "status": "completed",
+            "customer": "Ali"
+        },
+        {
+            "id": "t2",
+            "date": "2025-11-23T10:05:00Z",
+            "orderId": "o124",
+            "amount": 54,
+            "status": "pending",
+            "customer": "Mona"
+        },
+        {
+            "id": "t3",
+            "date": "2025-11-22T14:30:00Z",
+            "orderId": "o125",
+            "amount": 200,
+            "status": "completed",
+            "customer": "John"
+        },
+        {
+            "id": "t4",
+            "date": "2025-11-22T16:45:00Z",
+            "orderId": "o126",
+            "amount": 45,
+            "status": "failed",
+            "customer": "Sara"
+        }
+    ]
+}

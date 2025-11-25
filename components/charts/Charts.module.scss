@@ -1,0 +1,10 @@
+.chartContainer {
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
