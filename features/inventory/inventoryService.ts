@@ -1,4 +1,4 @@
-import api from '@/lib/api';
+import db from '@/mocks/db.json';
 
 export interface InventoryItem {
     id: string;
@@ -9,5 +9,5 @@ export interface InventoryItem {
 }
 
 export const getInventory = async (): Promise<InventoryItem[]> => {
-    return api.get('/inventory');
+    return Promise.resolve(db.inventory);
 };

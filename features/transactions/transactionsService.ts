@@ -1,4 +1,4 @@
-import api from '@/lib/api';
+import db from '@/mocks/db.json';
 
 export interface Transaction {
     id: string;
@@ -9,10 +9,24 @@ export interface Transaction {
     customer: string;
 }
 
-export const getTransactions = async (page = 1, limit = 10, sort = 'date', order = 'desc'): Promise<Transaction[]> => {
-    return api.get(`/transactions?_page=${page}&_limit=${limit}&_sort=${sort}&_order=${order}`);
+export const getTransactions = async (
+    page = 1,
+    limit = 10,
+    sort = 'date',
+    order = 'desc'
+): Promise<Transaction[]> => {
+    // Pagination and sorting are ignored for static mock data
+    const transactions = db.transactions.map(t => ({
+        ...t,
+        status: t.status as 'completed' | 'pending' | 'failed'
+    }));
+    return Promise.resolve(transactions);
 };
 
 export const getAllTransactions = async (): Promise<Transaction[]> => {
-    return api.get('/transactions');
-}
+    const transactions = db.transactions.map(t => ({
+        ...t,
+        status: t.status as 'completed' | 'pending' | 'failed'
+    }));
+    return Promise.resolve(transactions);
+};

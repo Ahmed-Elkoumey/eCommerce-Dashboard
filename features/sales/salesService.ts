@@ -1,4 +1,4 @@
-import api from '@/lib/api';
+import db from '@/mocks/db.json';
 
 export interface SalesData {
     id: number;
@@ -15,9 +15,9 @@ export interface SalesSummary {
 }
 
 export const getSales = async (): Promise<SalesData[]> => {
-    return api.get('/sales');
+    return Promise.resolve(db.sales);
 };
 
 export const getSummary = async (): Promise<SalesSummary> => {
-    return api.get('/summary');
+    return Promise.resolve(db.summary);
 };

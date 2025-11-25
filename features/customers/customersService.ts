@@ -1,4 +1,4 @@
-import api from '@/lib/api';
+import db from '@/mocks/db.json';
 
 export interface Customer {
     id: string;
@@ -9,5 +9,5 @@ export interface Customer {
 }
 
 export const getCustomers = async (): Promise<Customer[]> => {
-    return api.get('/customers');
+    return Promise.resolve(db.customers);
 };

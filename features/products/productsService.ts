@@ -1,4 +1,4 @@
-import api from '@/lib/api';
+import db from '@/mocks/db.json';
 
 export interface Product {
     id: string;
@@ -10,9 +10,10 @@ export interface Product {
 }
 
 export const getTopProducts = async (): Promise<Product[]> => {
-    return api.get('/products?_sort=unitsSold&_order=desc&_limit=5');
+    const sorted = db.products.sort((a: any, b: any) => b.unitsSold - a.unitsSold);
+    return Promise.resolve(sorted.slice(0, 5));
 };
 
 export const getProducts = async (): Promise<Product[]> => {
-    return api.get('/products');
+    return Promise.resolve(db.products);
 };
