@@ -90,3 +90,9 @@
         background-color: #f1f5f9;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+    }
+}

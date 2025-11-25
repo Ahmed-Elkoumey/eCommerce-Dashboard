@@ -4,6 +4,7 @@
     border-radius: 1rem;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
+    overflow-x: auto;
 }
 
 .header {
@@ -60,5 +61,11 @@
     &.ok {
         background-color: #dcfce7;
         color: var(--success-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
     }
 }
